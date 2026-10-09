@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پینگ پونگ نیوز | اخبار تنیس روی میز</title>
+  <meta name="description" content="آخرین اخبار، برنامه بازی‌ها و نتایج تنیس روی میز ایران و جهان" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- هدر -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="ball"></div>
+        <div>
+          <h1>پینگ پونگ نیوز</h1>
+          <span class="tagline">اخبار تنیس روی میز ایران و جهان</span>
+        </div>
+      </div>
+      <div class="live-badge">
+        <span class="pulse"></span>
+        آخرین به‌روزرسانی: <span id="lastUpdate">در حال بارگذاری...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- نوار ناوبری -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <button class="nav-btn active" data-filter="all">همه</button>
+      <button class="nav-btn" data-filter="iran">ایران</button>
+      <button class="nav-btn" data-filter="world">جهان</button>
+      <button class="nav-btn" data-filter="match">برنامه بازی‌ها</button>
+      <button class="nav-btn" data-filter="result">نتایج</button>
+    </div>
+  </nav>
+
+  <main class="container main">
+
+    <!-- بخش هیرو / برنامه بازی امروز -->
+    <section class="hero">
+      <h2 class="section-title">🏓 بازی‌های پیش‌رو</h2>
+      <div id="upcomingMatches" class="matches-grid">
+        <div class="loading">در حال بارگذاری...</div>
+      </div>
+    </section>
+
+    <!-- دو ستونه: اخبار + جدول امتیازات -->
+    <div class="content-grid">
+
+      <!-- اخبار -->
+      <section class="news-section">
+        <h2 class="section-title">📰 آخرین اخبار</h2>
+        <div id="newsList" class="news-list">
+          <div class="loading">در حال بارگذاری اخبار...</div>
+        </div>
+      </section>
+
+      <!-- سایدبار -->
+      <aside class="sidebar">
+        <h2 class="section-title">🏆 رنکینگ برتر</h2>
+        <div id="rankingList" class="ranking-list"></div>
+
+        <h2 class="section-title" style="margin-top:2rem;">🔗 منابع</h2>
+        <ul class="links">
+          <li><a href="https://www.ittf.com" target="_blank" rel="noopener">ITTF - فدراسیون جهانی</a></li>
+          <li><a href="https://www.irtf.ir" target="_blank" rel="noopener">فدراسیون تنیس روی میز ایران</a></li>
+        </ul>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- فوتر -->
+  <footer class="footer">
+    <div class="container">
+      <p>ساخته شده با ❤️ برای دوستداران پینگ پونگ | به‌روزرسانی خودکار هر ۱ ساعت</p>
+      <p class="small">© <span id="year"></span> PingPong News</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+        </html>
